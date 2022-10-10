@@ -1,4 +1,4 @@
-const { WebhookClient, MessageEmbed } = require("discord.js")
+const { WebhookClient, EmbedBuilder } = require("discord.js")
 const process = require('process');
 
 module.exports = class ErrorHandler {
@@ -36,7 +36,7 @@ module.exports = class ErrorHandler {
 }
 
 function embed(error) {
-    const errorEmbed = new MessageEmbed()
+    const errorEmbed = new EmbedBuilder()
     .setColor('#f54b4b')
     .setTimestamp()
     .setDescription("\`\`\`js\n" + error + "\`\`\`")
