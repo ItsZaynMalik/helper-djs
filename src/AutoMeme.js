@@ -1,4 +1,4 @@
-const { Client, MessageEmbed } = require('discord.js')
+const { Client, EmbedBuilder } = require('discord.js')
 const got = require('got')
 
 /**
@@ -56,8 +56,8 @@ module.exports = class AutoMeme {
 				const image = post.data.url;
 				const title = post.data.title;
 
-                const embed = new MessageEmbed()
-                .setColor("AQUA")
+                const embed = new EmbedBuilder()
+                .setColor("Aqua")
                 .setImage(image)
                 .setTitle(`${title}`)
                 .setURL(`${url}`)
